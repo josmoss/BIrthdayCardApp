@@ -21,7 +21,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G52-ue-760">
                                 <rect key="frame" x="8" y="72" width="304" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSZ-d5-GWU">
@@ -84,8 +84,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBa-Yd-xXx">
+                                <rect key="frame" x="234" y="45" width="54" height="30"/>
+                                <state key="normal" title="Button" image="camera"/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="c8o-Kk-ygk" eventType="touchUpInside" id="YAE-VI-mXe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haN-rb-g3x">
+                                <rect key="frame" x="133" y="340" width="54" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="c8o-Kk-ygk" eventType="touchUpInside" id="yTT-Jo-PvX"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jXt-J1-ayH">
-                                <rect key="frame" x="36" y="163" width="248" height="128"/>
+                                <rect key="frame" x="36" y="119" width="248" height="146"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="3PD-AU-WHP"/>
@@ -101,20 +115,71 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="haN-rb-g3x" firstAttribute="leading" secondItem="MjW-7I-ZEO" secondAttribute="leadingMargin" constant="117" id="5rd-GM-VkD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bBa-Yd-xXx" secondAttribute="trailing" constant="16" id="71b-tU-T9S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="haN-rb-g3x" secondAttribute="trailing" constant="117" id="DM1-FC-5ub"/>
+                            <constraint firstItem="bBa-Yd-xXx" firstAttribute="leading" secondItem="MjW-7I-ZEO" secondAttribute="leadingMargin" constant="218" id="Eex-xT-90v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jXt-J1-ayH" secondAttribute="trailing" constant="20" id="H4c-J8-vKV"/>
+                            <constraint firstItem="pRZ-OF-we6" firstAttribute="top" secondItem="haN-rb-g3x" secondAttribute="bottom" constant="66" id="RPH-ZL-0oX"/>
+                            <constraint firstItem="haN-rb-g3x" firstAttribute="top" secondItem="jXt-J1-ayH" secondAttribute="bottom" constant="75" id="Ujt-eI-q2f"/>
                             <constraint firstItem="jXt-J1-ayH" firstAttribute="leading" secondItem="MjW-7I-ZEO" secondAttribute="leadingMargin" constant="20" id="Y7L-gi-CFh"/>
-                            <constraint firstItem="pRZ-OF-we6" firstAttribute="top" secondItem="jXt-J1-ayH" secondAttribute="bottom" constant="189" id="b0e-YP-fZB"/>
+                            <constraint firstItem="bBa-Yd-xXx" firstAttribute="top" secondItem="ssf-mX-DKq" secondAttribute="bottom" constant="25" id="aM2-Iq-IIS"/>
                             <constraint firstItem="jXt-J1-ayH" firstAttribute="top" secondItem="ssf-mX-DKq" secondAttribute="bottom" constant="99" id="cis-0W-dGH"/>
+                            <constraint firstItem="pRZ-OF-we6" firstAttribute="top" secondItem="bBa-Yd-xXx" secondAttribute="bottom" constant="361" id="skE-ve-Bco"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="jXt-J1-ayH" id="1Uo-Qi-NoY"/>
+                        <segue destination="c9S-5Q-PiR" kind="show" identifier="CombinedSegue" id="Wzs-hT-T4o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c70-e7-Lzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1329" y="387"/>
+        </scene>
+        <!--Combined View Controller-->
+        <scene sceneID="Axg-HF-ygk">
+            <objects>
+                <viewController id="c9S-5Q-PiR" customClass="CombinedViewController" customModule="BirthDay1stVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hyj-Wj-KQg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ygu-xv-QsM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="arC-Ip-cDq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3kr-Th-suP">
+                                <rect key="frame" x="20" y="40" width="280" height="376"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-uc-25H">
+                                <rect key="frame" x="40" y="115" width="240" height="226"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3kr-Th-suP" firstAttribute="top" secondItem="Hyj-Wj-KQg" secondAttribute="bottom" constant="20" id="Hec-DC-Yv0"/>
+                            <constraint firstItem="bgM-uc-25H" firstAttribute="top" secondItem="Hyj-Wj-KQg" secondAttribute="bottom" constant="95" id="IHb-8X-nbT"/>
+                            <constraint firstItem="bgM-uc-25H" firstAttribute="leading" secondItem="arC-Ip-cDq" secondAttribute="leading" constant="40" id="TNN-BG-c2s"/>
+                            <constraint firstAttribute="trailing" secondItem="bgM-uc-25H" secondAttribute="trailing" constant="40" id="eCm-Qi-uWL"/>
+                            <constraint firstItem="Ygu-xv-QsM" firstAttribute="top" secondItem="bgM-uc-25H" secondAttribute="bottom" constant="95" id="g8q-hD-0el"/>
+                            <constraint firstItem="3kr-Th-suP" firstAttribute="leading" secondItem="arC-Ip-cDq" secondAttribute="leading" constant="20" id="iP4-jC-j1T"/>
+                            <constraint firstItem="Ygu-xv-QsM" firstAttribute="top" secondItem="3kr-Th-suP" secondAttribute="bottom" constant="20" id="p8X-bS-654"/>
+                            <constraint firstAttribute="trailing" secondItem="3kr-Th-suP" secondAttribute="trailing" constant="20" id="rKE-yU-jnh"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="3kr-Th-suP" id="6oQ-Bg-Yeg"/>
+                        <outlet property="camPicImageView" destination="bgM-uc-25H" id="aXS-rg-Y35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VsJ-bX-abv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oMP-VI-h1v">
@@ -137,6 +202,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="32" height="24"/>
         <image name="castle_thumb" width="200" height="100"/>
         <image name="city_thumb" width="200" height="100"/>
         <image name="fun_thumb" width="200" height="100"/>
