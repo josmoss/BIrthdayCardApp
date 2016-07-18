@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D89848D11D395A1E00AAC825 /* CombinedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89848D01D395A1E00AAC825 /* CombinedViewController.swift */; };
 		D89848D31D397D5000AAC825 /* actionable.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D89848D21D397D5000AAC825 /* actionable.mp3 */; };
+		D89848D61D39917E00AAC825 /* PinchZoomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89848D51D39917E00AAC825 /* PinchZoomImageView.swift */; };
 		D8C650211D380A7900AD99FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C650201D380A7900AD99FD /* AppDelegate.swift */; };
 		D8C650261D380A7900AD99FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C650241D380A7900AD99FD /* Main.storyboard */; };
 		D8C650281D380A7900AD99FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C650271D380A7900AD99FD /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		D89848D01D395A1E00AAC825 /* CombinedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinedViewController.swift; sourceTree = "<group>"; };
 		D89848D21D397D5000AAC825 /* actionable.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = actionable.mp3; sourceTree = "<group>"; };
+		D89848D51D39917E00AAC825 /* PinchZoomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchZoomImageView.swift; sourceTree = "<group>"; };
 		D8C6501D1D380A7900AD99FD /* BirthDay1stVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthDay1stVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C650201D380A7900AD99FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C650251D380A7900AD99FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,25 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		D89848D71D39919200AAC825 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D89848D51D39917E00AAC825 /* PinchZoomImageView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D89848D81D3C93D500AAC825 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D89848D21D397D5000AAC825 /* actionable.mp3 */,
+				D8C650271D380A7900AD99FD /* Assets.xcassets */,
+				D8C650291D380A7900AD99FD /* LaunchScreen.storyboard */,
+				D8C6502C1D380A7900AD99FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D8C650141D380A7900AD99FD = {
 			isa = PBXGroup;
 			children = (
@@ -71,12 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				D8C650201D380A7900AD99FD /* AppDelegate.swift */,
-				D89848D41D39852700AAC825 /* Controllers */,
 				D8C650241D380A7900AD99FD /* Main.storyboard */,
-				D89848D21D397D5000AAC825 /* actionable.mp3 */,
-				D8C650271D380A7900AD99FD /* Assets.xcassets */,
-				D8C650291D380A7900AD99FD /* LaunchScreen.storyboard */,
-				D8C6502C1D380A7900AD99FD /* Info.plist */,
+				D89848D71D39919200AAC825 /* Views */,
+				D89848D41D39852700AAC825 /* Controllers */,
+				D89848D81D3C93D500AAC825 /* Supporting Files */,
 			);
 			path = BirthDay1stVC;
 			sourceTree = "<group>";
@@ -153,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89848D61D39917E00AAC825 /* PinchZoomImageView.swift in Sources */,
 				D8C650211D380A7900AD99FD /* AppDelegate.swift in Sources */,
 				D8C650331D380ABD00AD99FD /* BackgroundPicViewController.swift in Sources */,
 				D8C650351D383FF600AD99FD /* CameraViewController.swift in Sources */,

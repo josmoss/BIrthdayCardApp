@@ -19,21 +19,21 @@ class BackgroundPicViewController: UIViewController {
 
     @IBAction func castleTapped(sender: UIButton) {
         
-        self.selectedBackgroundImage = UIImage(named: "castleBackground")
+        self.selectedBackgroundImage = UIImage(named: "minions_1")
         performSegueWithIdentifier("CameraSegue", sender: self)
         
     }
     
     @IBAction func cityTapped(sender: UIButton) {
         
-        self.selectedBackgroundImage = UIImage(named: "cityBackground")
+        self.selectedBackgroundImage = UIImage(named: "minions_2")
         performSegueWithIdentifier("CameraSegue", sender: self)
         
     }
     
     @IBAction func funTapped(sender: UIButton) {
         
-        self.selectedBackgroundImage = UIImage(named: "funBackground")
+        self.selectedBackgroundImage = UIImage(named: "minions_3")
         performSegueWithIdentifier("CameraSegue", sender: self)
         
     }
